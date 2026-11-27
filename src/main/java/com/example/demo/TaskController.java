@@ -12,4 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
+    private final List<Task> tasks = new ArrayList<>();
+    private Long nextId = 1L;
+    
 }
