@@ -19,4 +19,11 @@ public class TaskController {
     public List<Task> list() {
         return tasks;
     }
+
+    @PostMapping
+    public Task create(@RequestBody Task task) {
+        task.setId(nextId++);
+        task.add(task);
+        return task;
+    }
 }
