@@ -23,7 +23,7 @@ public class TaskController {
     @PostMapping
     public Task create(@RequestBody Task task) {
         task.setId(nextId++);
-        task.add(task);
+        tasks.add(task);
         return task;
     }
 }
