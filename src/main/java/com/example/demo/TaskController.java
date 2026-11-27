@@ -14,5 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TaskController {
     private final List<Task> tasks = new ArrayList<>();
     private Long nextId = 1L;
-    
+
+    @GetMapping
+    public List<Task> list() {
+        return tasks;
+    }
 }
